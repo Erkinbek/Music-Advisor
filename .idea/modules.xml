@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Music_Advisor.iml" filepath="$PROJECT_DIR$/.idea/modules/Music_Advisor.iml" group="Music_Advisor" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Problems/Initializing an array of integers/Problems-Initializing_an_array_of_integers.iml" filepath="$PROJECT_DIR$/.idea/modules/Problems/Initializing an array of integers/Problems-Initializing_an_array_of_integers.iml" group="Music_Advisor/Problems-Initializing_an_array_of_integers" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Problems/Initializing an array of integers/Problems-Initializing_an_array_of_integers_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Problems/Initializing an array of integers/Problems-Initializing_an_array_of_integers_main.iml" group="Music_Advisor/Problems-Initializing_an_array_of_integers" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Problems/Initializing an array of integers/Problems-Initializing_an_array_of_integers_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Problems/Initializing an array of integers/Problems-Initializing_an_array_of_integers_test.iml" group="Music_Advisor/Problems-Initializing_an_array_of_integers" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/util/util.iml" filepath="$PROJECT_DIR$/.idea/modules/util/util.iml" group="Music_Advisor/util" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/util/util_main.iml" filepath="$PROJECT_DIR$/.idea/modules/util/util_main.iml" group="Music_Advisor/util" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/util/util_test.iml" filepath="$PROJECT_DIR$/.idea/modules/util/util_test.iml" group="Music_Advisor/util" />
+    </modules>
+  </component>
+</project>
