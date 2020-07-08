@@ -3,23 +3,39 @@ package advisor;
 import java.util.Scanner;
 
 public class Main {
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String str = scanner.nextLine();
-        print(str, scanner);
+        print(str, scanner, false);
     }
 
-    public static void print(String str, Scanner scanner) {
-        if (str.equals("new")) printNews();
-        if (str.equals("featured")) printFeatured();
-        if (str.equals("categories")) printCategories();
-        if (str.equals("playlists Mood")) printPlaylists();
-        if (str.equals("exit")) {
-            System.out.println("---GOODBYE!---");
-            return;
+    public static void print(String str, Scanner scanner, boolean authStatus) {
+        if (str.equals("auth")) {
+            authStatus = true;
+            System.out.println("https://accounts.spotify.com/authorize?client_id=7445592451214ca29a55a48e1644a768&redirect_uri=http://localhost:8080&response_type=code");
+            System.out.println("---SUCCESS---");
         }
-        str = scanner.nextLine();
-        print(str, scanner);
+        if (authStatus) {
+            switch (str) {
+                case "new" : printNews(); break;
+                case "featured" : printFeatured(); break;
+                case "categories" : printCategories(); break;
+                case "playlists Mood" : printPlaylists(); break;
+                case "exit" : sayBye(); break;
+            }
+        } else {
+            System.out.println("Please, provide access for application.");
+        }
+        if (scanner.hasNextLine()) {
+            str = scanner.nextLine();
+            print(str, scanner, authStatus);
+        }
+        return;
+    }
+
+    public static void sayBye() {
+        System.out.println("---GOODBYE!---");
     }
 
     public static void printNews() {
