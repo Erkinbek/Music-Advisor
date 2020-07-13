@@ -13,6 +13,7 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/Music Advisor/task" />
             <option value="$PROJECT_DIR$/Problems/Account" />
+            <option value="$PROJECT_DIR$/Problems/Account Service" />
             <option value="$PROJECT_DIR$/Problems/Account and its owner" />
             <option value="$PROJECT_DIR$/Problems/Accounts" />
             <option value="$PROJECT_DIR$/Problems/Army" />
@@ -21,6 +22,7 @@
             <option value="$PROJECT_DIR$/Problems/Book" />
             <option value="$PROJECT_DIR$/Problems/Car" />
             <option value="$PROJECT_DIR$/Problems/Classes for Hospital" />
+            <option value="$PROJECT_DIR$/Problems/Compact strings with AsciiCharSequence" />
             <option value="$PROJECT_DIR$/Problems/Complex" />
             <option value="$PROJECT_DIR$/Problems/Complex numbers" />
             <option value="$PROJECT_DIR$/Problems/Complex numbers (1)" />
@@ -37,6 +39,7 @@
             <option value="$PROJECT_DIR$/Problems/Inner boxes" />
             <option value="$PROJECT_DIR$/Problems/IntBinaryOperation" />
             <option value="$PROJECT_DIR$/Problems/Move the first N characters" />
+            <option value="$PROJECT_DIR$/Problems/Mutable geometric shapes" />
             <option value="$PROJECT_DIR$/Problems/Next even number" />
             <option value="$PROJECT_DIR$/Problems/Overloading methods" />
             <option value="$PROJECT_DIR$/Problems/Patient needs a doctor" />
