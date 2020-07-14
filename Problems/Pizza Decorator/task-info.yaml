@@ -181,5 +181,9 @@ files:
     }
   learner_created: false
 feedback_link: https://hyperskill.org/learn/step/6009
-status: Unchecked
+status: Solved
+feedback:
+  message: <html>Correct solution<br/><br/>Continue on <a href="https://hyperskill.org/learn/step/6009">JetBrains
+    Academy</a></html>
+  time: Tue, 14 Jul 2020 04:06:10 UTC
 record: -1

@@ -6,25 +6,15 @@ class TestDrive {
         System.out.println(simpleVeganPizza.getDescription() + " $" + formatSum(simpleVeganPizza.cost()));
 
         Pizza veganPizzaDecor = new Vegan();
-        veganPizzaDecor = new Broccoli(new Pizza() {
-            @Override
-            double cost() {
-                return 4.99;
-            }
-        });
-        veganPizzaDecor = new Tomato(new Broccoli(new Pizza() {
-            @Override
-            double cost() {
-                return 0;
-            }
-        }));
-        veganPizzaDecor = new Spinach(new Tomato());
+        veganPizzaDecor = new Broccoli(new Vegan());
+        veganPizzaDecor = new Tomato(new Broccoli(new Vegan()));
+        veganPizzaDecor = new Spinach(new Tomato(new Broccoli(new Vegan())));
         System.out.println(veganPizzaDecor.getDescription() + " $" + formatSum(veganPizzaDecor.cost()));
 
         Pizza meatPizzaDecor = new MeatHeaven();
-        meatPizzaDecor = new Ham(new Chicken());
-        meatPizzaDecor = new Chicken(/* write your code here */);
-        meatPizzaDecor = new Cheese(/* write your code here */);
+        meatPizzaDecor = new Ham(new MeatHeaven());
+        meatPizzaDecor = new Chicken(new Ham(new MeatHeaven()));
+        meatPizzaDecor = new Cheese(new Chicken(new Ham(new MeatHeaven())));
         System.out.println(meatPizzaDecor.getDescription() + " $" + formatSum(meatPizzaDecor.cost()));
 
     }

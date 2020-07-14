@@ -3,19 +3,19 @@ import java.util.Locale;
 class TestDrive {
     public static void main(String[] args) throws InterruptedException {
         Coffee simpleEspresso = new Espresso();
-        System.out.println(/* write your code here */ + " $" + formatSum(/* write your code here */));
+        System.out.println(simpleEspresso.getDescription() + " $" + formatSum(simpleEspresso.cost()));
 
-        Coffee espressoWithDecor = /* write your code here */;
-        espressoWithDecor = new Milk(/* write your code here */);
-        espressoWithDecor = new Sugar(/* write your code here */);
-        System.out.println(/* write your code here */ + " $" + formatSum(/* write your code here */));
+        Coffee espressoWithDecor = new Espresso();
+        espressoWithDecor = new Milk(new Espresso());
+        espressoWithDecor = new Sugar(new Milk(new Espresso()));
+        System.out.println(espressoWithDecor.getDescription() + " $" + formatSum(espressoWithDecor.cost()));
 
-        Coffee instantWithDecor = /* write your code here */;
-        instantWithDecor = new Whip(/* write your code here */);
-        instantWithDecor = new Sugar(/* write your code here */);
-        instantWithDecor = new Sugar(/* write your code here */);
-        instantWithDecor = new Sugar(/* write your code here */);
-        System.out.println(/* write your code here */ + " $" + formatSum(/* write your code here */));
+        Coffee instantWithDecor = new Espresso();
+        instantWithDecor = new Whip(new InstantCoffee());
+        instantWithDecor = new Sugar(new Whip(new InstantCoffee()));
+        instantWithDecor = new Sugar(new Whip(new InstantCoffee()));
+        instantWithDecor = new Sugar(new Sugar(new Sugar(new Whip(new InstantCoffee()))));
+        System.out.println(instantWithDecor.getDescription() + " $" + formatSum(instantWithDecor.cost()));
 
         System.out.println("I'm drinking my " + instantWithDecor.getDescription());
         Thread.sleep(1500);
@@ -25,8 +25,8 @@ class TestDrive {
         Thread.sleep(1500);
         System.out.println("-I understand");
 
-        instantWithDecor = new Whip(/* write your code here */);
-        System.out.println(/* write your code here */ + " $" + formatSum(/* write your code here */));
+        instantWithDecor = new Whip(new Sugar(new Sugar(new Sugar(new Whip(new InstantCoffee())))));
+        System.out.println(instantWithDecor.getDescription() + " $" + formatSum(instantWithDecor.cost()));
     }
 
     private static String formatSum(double sum) {
@@ -76,16 +76,18 @@ class Milk extends Decorator {
 
     private Coffee coffee;
 
-    /* write constructor */
+    Milk (Coffee coffee) {
+        this.coffee = coffee;
+    }
 
     @Override
     String getDescription() {
-        return /* write your code here */ + ", Milk";
+        return coffee.getDescription() + ", Milk";
     }
 
     @Override
     double cost() {
-        return .13 + /* write your code here */;
+        return .13 + coffee.cost();
     }
 }
 
@@ -93,16 +95,18 @@ class Sugar extends Decorator {
 
     private Coffee coffee;
 
-        /* write constructor */
+    public Sugar(Coffee coffee) {
+        this.coffee = coffee;
+    }
 
     @Override
     String getDescription() {
-        return /* write your code here */ + ", Sugar";
+        return coffee.getDescription() + ", Sugar";
     }
 
     @Override
     double cost() {
-        return .02 + /* write your code here */;
+        return .02 + coffee.cost();
     }
 }
 
@@ -110,15 +114,17 @@ class Whip extends Decorator {
 
     private Coffee coffee;
 
-        /* write constructor */
+    public Whip(Coffee coffee) {
+        this.coffee = coffee;
+    }
 
     @Override
     String getDescription() {
-        return /* write your code here */ + ", Whip";
+        return coffee.getDescription()+ ", Whip";
     }
 
     @Override
     double cost() {
-        return .10 + /* write your code here */;
+        return .10 + coffee.cost();
     }
 }

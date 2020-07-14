@@ -18,13 +18,13 @@ class Triangle extends Shape {
     }
     @Override
     double getPerimeter() {
-        return a+b+c;
+        return a + b + c;
     }
 
     @Override
     double getArea() {
-        double s = (a+b+c) / 2;
-        return (s * (s - a) * (s - b) * (s - c));
+        double s = (a + b + c) / 2;
+        return s * (s - a) * (s - b) * (s - c);
     }
 }
 
@@ -53,7 +53,7 @@ class Circle extends Shape {
 
     double r;
 
-    Circle (double r) {
+    Circle(double r) {
         this.r = r;
     }
 
